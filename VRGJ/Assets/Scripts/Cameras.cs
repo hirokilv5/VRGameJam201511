@@ -37,13 +37,16 @@ public class Cameras : MonoBehaviour {
 		//  Ray ray = Camera.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hit = new RaycastHit ();
 		if (Physics.Raycast(Height, Camera.main.transform.forward, out hit)) {
-			obj = hit.collider.gameObject;
 			if(obj == hit.collider.gameObject){
 
             }
             else
             {
-                if (obj != null) stage.Lighting(obj, false);
+                if (obj != null)
+                {
+                    Debug.Log("ho");
+                    stage.Lighting(obj, false);
+                }
 
                 obj = hit.collider.gameObject;
 

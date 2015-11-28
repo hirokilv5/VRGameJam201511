@@ -52,6 +52,7 @@ public class Stage : MonoBehaviour {
 	// 光る処理。光らせるオブジェクトとON/OFFを引数に動作する
 	public void Lighting(GameObject masu,bool set)
 	{
+        Debug.Log("hoge");
 		//ParticleSystem particlesystem = masu.GetComponentInChildren<ParticleSystem>();
 		ParticleSystem[] particles = masu.GetComponentsInChildren<ParticleSystem>();
 		if (set)
