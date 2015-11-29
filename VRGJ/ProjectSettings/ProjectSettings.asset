@@ -77,7 +77,7 @@ PlayerSettings:
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
-  productGUID: c3804916cabe548dd8446aa9a39d0850
+  productGUID: 172869956bd664e56bd14bba6aeed885
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -196,23 +196,12 @@ PlayerSettings:
   ps4ApplicationParam3: 0
   ps4ApplicationParam4: 0
   ps4GarlicHeapSize: 2048
-  ps4Passcode: qBlQ9wQj99nsQzldVI5ZuGXbEWRK5RhR
+  ps4Passcode: uokYDeWl5noesnB4mh19PM6Dph2Nh722
   ps4pnSessions: 1
   ps4pnPresence: 1
   ps4pnFriends: 1
   ps4pnGameCustomData: 1
   playerPrefsSupport: 0
-<<<<<<< HEAD
-  ps4ReprojectionSupport: 0
-  ps4UseAudio3dBackend: 0
-  ps4Audio3dVirtualSpeakerCount: 14
-  ps4attribUserManagement: 0
-  ps4attribMoveSupport: 0
-  ps4attrib3DSupport: 0
-  ps4attribShareSupport: 0
-  ps4IncludedModules: []
-=======
->>>>>>> hirokisub
   monoEnv: 
   psp2Splashimage: {fileID: 0}
   psp2NPTrophyPackPath: 
@@ -231,7 +220,7 @@ PlayerSettings:
   psp2LiveAreaTrialPath: 
   psp2PatchChangeInfoPath: 
   psp2PatchOriginalPackage: 
-  psp2PackagePassword: XdCdG5nG5azdNMK66MuCV6GXi5xr84P2
+  psp2PackagePassword: AggBfUKJEdmm09Z1uFII2PNfTdMjJFB5
   psp2KeystoneFile: 
   psp2MemoryExpansionMode: 0
   psp2DRMType: 0
@@ -263,16 +252,7 @@ PlayerSettings:
   psmSplashimage: {fileID: 0}
   virtualRealitySupported: 0
   spritePackerPolicy: 
-  scriptingDefineSymbols:
-    1: CROSS_PLATFORM_INPUT
-    2: CROSS_PLATFORM_INPUT
-    4: CROSS_PLATFORM_INPUT;MOBILE_INPUT
-    7: CROSS_PLATFORM_INPUT;MOBILE_INPUT
-    14: MOBILE_INPUT
-    15: CROSS_PLATFORM_INPUT;MOBILE_INPUT
-    16: CROSS_PLATFORM_INPUT;MOBILE_INPUT
-    17: MOBILE_INPUT
-    20: MOBILE_INPUT
+  scriptingDefineSymbols: {}
   metroPackageName: VRGJ
   metroPackageLogo: 
   metroPackageLogo140: 
@@ -386,43 +366,11 @@ PlayerSettings:
   XboxOneSplashScreen: {fileID: 0}
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
-  intPropertyNames:
-  - Android::ScriptingBackend
-  - Standalone::ScriptingBackend
-  - WebGL::ScriptingBackend
-  - WebGL::audioCompressionFormat
-  - WebGL::exceptionSupport
-  - WebGL::memorySize
-  - WebPlayer::ScriptingBackend
-  - iOS::Architecture
-  - iOS::EnableIncrementalBuildSupportForIl2cpp
-  - iOS::ScriptingBackend
-  Android::ScriptingBackend: 0
-  Standalone::ScriptingBackend: 0
-  WebGL::ScriptingBackend: 1
-  WebGL::audioCompressionFormat: 4
-  WebGL::exceptionSupport: 1
-  WebGL::memorySize: 256
-  WebPlayer::ScriptingBackend: 0
-  iOS::Architecture: 2
-  iOS::EnableIncrementalBuildSupportForIl2cpp: 0
-  iOS::ScriptingBackend: 1
+  intPropertyNames: []
   boolPropertyNames:
-  - WebGL::analyzeBuildSize
-  - WebGL::dataCaching
-  - WebGL::useEmbeddedResources
   - XboxOne::enus
-  WebGL::analyzeBuildSize: 0
-  WebGL::dataCaching: 0
-  WebGL::useEmbeddedResources: 0
   XboxOne::enus: 1
-  stringPropertyNames:
-  - WebGL::emscriptenArgs
-  - WebGL::template
-  - additionalIl2CppArgs::additionalIl2CppArgs
-  WebGL::emscriptenArgs: 
-  WebGL::template: APPLICATION:Default
-  additionalIl2CppArgs::additionalIl2CppArgs: 
+  stringPropertyNames: []
   firstStreamedSceneWithResources: 0
   cloudProjectId: 
   projectId: 
