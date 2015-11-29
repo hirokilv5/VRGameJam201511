@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 m_EditorVersion: 5.2.2f1
+=======
+m_EditorVersion: 5.1.0f3
+>>>>>>> hirokisub
 m_StandardAssetsVersion: 0
