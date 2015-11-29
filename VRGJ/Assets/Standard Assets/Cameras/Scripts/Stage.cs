@@ -4,12 +4,13 @@ using System.Collections;
 public class Stage : MonoBehaviour {
 
 	public struct Stage_T{
-		public bool  LightFlg;
+		public bool LightFlg;
 		public bool EnemyFlg;
 		public bool PartyFlg;
 
 		public GameObject Board;
 	}
+
 	public Stage_T[,] masu = new Stage_T[9,9];
 
 	public GameObject[,] Board = new GameObject[9,9];
@@ -42,33 +43,37 @@ public class Stage : MonoBehaviour {
 	}
 
 	void Update () {
-		ScopeDecide(masu[3,0].Board,masu[3,0].EnemyFlg,masu[3,0].PartyFlg);
-		ScopeDecide(masu[3,1].Board,masu[3,1].EnemyFlg,masu[3,1].PartyFlg);
-		ScopeDecide(masu[3,2].Board,masu[3,2].EnemyFlg,masu[3,2].PartyFlg);
-
 	
 	}
 
 	// 光る処理。光らせるオブジェクトとON/OFFを引数に動作する
-	public void Lighting(GameObject masu,bool set)
+	/*********************
+	* エフェクトの種類
+	* 0:決定
+	* 3:選択
+	* 9:オーラ
+	***********************/
+	public void Lighting(GameObject masu,bool setting, bool scope = false,bool aura = false)
 	{
-        Debug.Log("hoge");
-		//ParticleSystem particlesystem = masu.GetComponentInChildren<ParticleSystem>();
 		ParticleSystem[] particles = masu.GetComponentsInChildren<ParticleSystem>();
-		if (set)
-		{
+		// 決定
+		if (setting){
 			particles[0].Play();
 		} else {
 			particles[0].Stop();
 		}
-	}
-
-	// いける範囲の色を変える
-	public void ScopeDecide(GameObject masu,bool enemy,bool party)
-	{
-		Renderer renderer = masu.GetComponent<Renderer>();
-		renderer.material.color = new Color(0,0.8f,0.3f);
-
+		// 選択範囲
+		if (scope){
+			particles[9].Play();
+		} else {
+			particles[9].Stop();
+		}
+		// スーバーサイヤ人
+		if (aura){
+			particles[3].Play();
+		} else {
+			particles[3].Stop();
+		}
 	}
 
 

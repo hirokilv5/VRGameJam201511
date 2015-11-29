@@ -64,7 +64,7 @@ namespace UnityStandardAssets.Cameras
 
                     // setingをtrueにします
                     seting = true;
-                    stage.Lighting(obj,seting);
+                    stage.Lighting(obj,true);
 
                     Debug.Log (obj.name);
                 }

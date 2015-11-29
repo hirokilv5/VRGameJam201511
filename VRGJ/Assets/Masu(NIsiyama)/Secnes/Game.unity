@@ -130,7 +130,7 @@ Prefab:
       objectReference: {fileID: 1650777921}
     - target: {fileID: 100004, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 2}
@@ -147,14 +147,13 @@ GameObject:
   - 92: {fileID: 242456891}
   - 124: {fileID: 242456890}
   - 81: {fileID: 242456889}
-  - 114: {fileID: 242456894}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &242456889
 AudioListener:
   m_ObjectHideFlags: 0
@@ -217,30 +216,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 242456888}
   m_LocalRotation: {x: .258819073, y: 0, z: 0, w: .965925813}
-  m_LocalPosition: {x: 4, y: 2.5, z: -1}
+  m_LocalPosition: {x: 0, y: 6.5, z: -6.67999983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &242456894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 242456888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f303f8d8cd82e9c4da137837b2a63b82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Target_Pos: {fileID: 0}
-  Height: {x: 0, y: .5, z: 0}
-  sensitivityX: 15
-  sensitivityY: 15
-  minimumY: -60
-  maximumY: 60
-  stage: {fileID: 1650777921}
-  obj: {fileID: 0}
 --- !u!1001 &1050749185
 Prefab:
   m_ObjectHideFlags: 0
