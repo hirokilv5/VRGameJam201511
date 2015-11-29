@@ -282,7 +282,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 156970, guid: 41be23100fd934e03a39acb2ad9511c8, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 156970, guid: 41be23100fd934e03a39acb2ad9511c8, type: 2}
+      propertyPath: m_TagString
+      value: Stage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 41be23100fd934e03a39acb2ad9511c8, type: 2}
@@ -347,6 +351,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &1506617518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1506617520}
+  - 114: {fileID: 1506617519}
+  m_Layer: 0
+  m_Name: Coma
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1506617519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506617518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb2a4c7b925f8f478254226e0b7e4c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coma_Prehab:
+  - {fileID: 150244, guid: 8a0c2f2e94a0aea46ae42d4b669a500f, type: 2}
+  - {fileID: 108950, guid: a32bf5d6fa730a24c9819ca25bc2bd7c, type: 2}
+  - {fileID: 112790, guid: 100707fb31bf5cf408387e2112e1b17d, type: 2}
+  - {fileID: 189770, guid: c51b4c7727bd20e448597316793ee4eb, type: 2}
+  - {fileID: 107814, guid: 3f46724d8c329c74aab9833aedcffd47, type: 2}
+  - {fileID: 101894, guid: 49b578abfdb5ad14bb5eda6085a5bedf, type: 2}
+  - {fileID: 103576, guid: 074ef7bc5ff00fd47b58058efa485567, type: 2}
+  - {fileID: 186140, guid: 641b1feb20f91ae4ba7ffcd7d7c1e710, type: 2}
+--- !u!4 &1506617520
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506617518}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1 &1650777919
 GameObject:
   m_ObjectHideFlags: 0

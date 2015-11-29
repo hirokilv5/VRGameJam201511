@@ -38,13 +38,12 @@ public class Cameras : MonoBehaviour {
 		RaycastHit hit = new RaycastHit ();
 		if (Physics.Raycast(Height, Camera.main.transform.forward, out hit)) {
 			if(obj == hit.collider.gameObject){
-
+                ;
             }
-            else
+            else if (hit.collider.gameObject.tag == "stage")
             {
                 if (obj != null)
                 {
-                    Debug.Log("ho");
                     stage.Lighting(obj, false);
                 }
 
@@ -53,11 +52,7 @@ public class Cameras : MonoBehaviour {
                 // setingをtrueにします
                 seting = true;
                 stage.Lighting(obj, seting);
-
-                Debug.Log(obj.name);
             }
-
-				
 		}
 		// ここまで
 
