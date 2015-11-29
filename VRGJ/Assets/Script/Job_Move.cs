@@ -5,9 +5,8 @@ public class Job_Move : MonoBehaviour {
     public Stage stage;
 
     void Job_Move_Control(int i, int j, int status) {
-        switch (status)
-        {
-            case (int)Player.JOB_NUMBER.OU: //王
+        if ((int)Player.JOB_NUMBER.OU == status/*王*/)
+            {
                 //プレイヤー視点
                 if (stage.masu[i, j].PartyFlg == true)
                 {
@@ -52,10 +51,10 @@ public class Job_Move : MonoBehaviour {
                     //真ん中右
                     if (j - 1 >= 0 && stage.masu[i, j - 1].PartyFlg != true) stage.masu[i, j - 1].LightFlg = true;
                 }
-                break;
-
-            case (int)Player.JOB_NUMBER.N_HU:   //成金
-            case (int)Player.JOB_NUMBER.KINN:   //金
+               
+            }
+            else if(status == (int)Player.JOB_NUMBER.N_HU/*成金*/ || status == (int)Player.JOB_NUMBER.KINN/*金*/ )
+            {
                 //プレイヤー視点
                 if (stage.masu[i, j].PartyFlg == true)
                 {
@@ -96,9 +95,9 @@ public class Job_Move : MonoBehaviour {
                     //真ん中右
                     if (j + 1 <= 8 && stage.masu[i, j + 1].PartyFlg != true) stage.masu[i, j + 1].LightFlg = true;
                 }
-                break;
-
-            case (int)Player.JOB_NUMBER.GINN:   //銀
+            }
+            else if (status == (int)Player.JOB_NUMBER.GINN/*銀*/)
+            {
                 //プレイヤー視点
                 if (stage.masu[i, j].PartyFlg == true)
                 {
@@ -131,9 +130,9 @@ public class Job_Move : MonoBehaviour {
                         if (stage.masu[i - 1, j].PartyFlg != true) stage.masu[i - 1, j].LightFlg = true;
                     }
                 }
-                break;
-
-            case (int)Player.JOB_NUMBER.KEIMA:  //桂馬
+            }
+            else if (status == (int)Player.JOB_NUMBER.KEIMA/*桂馬*/)
+            {
                 //プレイヤー視点
                 if (stage.masu[i, j].PartyFlg == true)
                 {
@@ -152,9 +151,9 @@ public class Job_Move : MonoBehaviour {
                         if (j + 1 <= 8 && stage.masu[i + 2, j + 1].PartyFlg != true) stage.masu[i + 2, j + 1].LightFlg = true;  //左
                     }
                 }
-                break;
-
-            case (int)Player.JOB_NUMBER.KOUSYA: //香車
+            }
+            else if (status == (int)Player.JOB_NUMBER.KOUSYA/*香車*/)
+            {
                 //プレイヤー視点
                 if (stage.masu[i, j].PartyFlg == true)
                 {
@@ -203,9 +202,9 @@ public class Job_Move : MonoBehaviour {
                         }
                     }
                 }
-                break;
-
-            case (int)Player.JOB_NUMBER.HISYA:  //飛車
+            }
+            else if (status == (int)Player.JOB_NUMBER.HISYA/*飛車*/)
+            {
                 //プレイヤー視点
                 if (stage.masu[i, j].PartyFlg == true)
                 {
@@ -382,9 +381,9 @@ public class Job_Move : MonoBehaviour {
                         }
                     }
                 }
-                break;
-
-            case (int)Player.JOB_NUMBER.KAKU:   //角
+            }
+            else if (status == (int)Player.JOB_NUMBER.KAKU/*角*/)
+            {
                 //プレイヤー視点
                 if (stage.masu[i, j].PartyFlg == true)
                 {
@@ -569,9 +568,9 @@ public class Job_Move : MonoBehaviour {
                         }
                     }
                 }
-                break;
-
-            case (int)Player.JOB_NUMBER.HU: //歩
+            }
+            else if (status == (int)Player.JOB_NUMBER.HU /*歩*/)
+            {
                 //プレイヤー視点
                 if (stage.masu[i, j].PartyFlg == true)
                 {
@@ -590,19 +589,19 @@ public class Job_Move : MonoBehaviour {
                         stage.masu[i + 1, j].LightFlg = true;
                     }
                 }
-                break;
-
-            case (int)Player.JOB_NUMBER.N_HISYA:    //成飛車
+            }
+            else if (status == (int)Player.JOB_NUMBER.N_HISYA/*成飛車*/)
+            {
                 //プレイヤー視点
                 if (stage.masu[i, j].PartyFlg == true)
                 {
-                    //右上、真ん中上、左上
+                    //右上、左上
                     if (i - 1 >= 0)
                     {
                         if (j - 1 >= 0 && stage.masu[i - 1, j - 1].PartyFlg != true) stage.masu[i - 1, j - 1].LightFlg = true;  //左
                         if (j + 1 <= 8 && stage.masu[i - 1, j + 1].PartyFlg != true) stage.masu[i - 1, j + 1].LightFlg = true;  //右
                     }
-                    //右下、真ん中下、左下
+                    //右下、左下
                     if (i + 1 <= 8)
                     {
                         if (j - 1 >= 0 && stage.masu[i + 1, j - 1].PartyFlg != true) stage.masu[i + 1, j - 1].LightFlg = true;  //左
@@ -617,7 +616,7 @@ public class Job_Move : MonoBehaviour {
                             //進みたい場所にプレイヤー(味方)がいたら抜ける
                             if (stage.masu[k - 1, j].PartyFlg == true)
                             {
-                                break;
+                            break;
                             }
                             else
                             {
@@ -793,22 +792,21 @@ public class Job_Move : MonoBehaviour {
                         }
                     }
                 }
-                break;
+            }
 
-            case 10: //成角
+            else if (status == (int)Player.JOB_NUMBER.N_KAKU/*成角*/)
+            {
                 //プレイヤー視点
                 if (stage.masu[i, j].PartyFlg == true)
                 {
                     //上
-                    if (i - 1 >= 0 && stage.masu[i - 1, j].PartyFlg != true)    stage.masu[i - 1, j].LightFlg = true;
-                    }
+                    if (i - 1 >= 0 && stage.masu[i - 1, j].PartyFlg != true) stage.masu[i - 1, j].LightFlg = true;
                     //下
-                    if (i + 1 <= 8 && stage.masu[i + 1, j].PartyFlg != true)    stage.masu[i - 1, j].LightFlg = true;
-                    }
+                    if (i + 1 <= 8 && stage.masu[i + 1, j].PartyFlg != true) stage.masu[i - 1, j].LightFlg = true;
                     //左
-                    if (j - 1 >= 0 && stage.masu[i, j - 1].PartyFlg != true)    stage.masu[i, j - 1].LightFlg = true;
+                    if (j - 1 >= 0 && stage.masu[i, j - 1].PartyFlg != true) stage.masu[i, j - 1].LightFlg = true;
                     //右
-                    if (j + 1 <= 8 && stage.masu[i, j + 1].PartyFlg != true)    stage.masu[i, j + 1].LightFlg = true;
+                    if (j + 1 <= 8 && stage.masu[i, j + 1].PartyFlg != true) stage.masu[i, j + 1].LightFlg = true;
 
                     //右上
                     //ｋが0、Tempolaliy_sabが8になるまでLightFlgをtrueにする
@@ -833,12 +831,14 @@ public class Job_Move : MonoBehaviour {
                         }
                     }
                     Tempolaliy_sab = j;
+                    
                     //左上
                     //ｋが0、Tempolaliy_sabが0になるまでLightFlgをtrueにする
                     for (int k = i; k >= 0; k--)
                     {
                         if (k - 1 >= 0 && Tempolaliy_sab - 1 >= 0)
                         {
+                            
                             //進みたい場所にプレイヤー(味方)がいたら抜ける
                             if (stage.masu[k - 1, Tempolaliy_sab--].PartyFlg == true)
                             {
@@ -921,17 +921,16 @@ public class Job_Move : MonoBehaviour {
                     //真ん中右
                     if (j - 1 >= 0 && stage.masu[i, j - 1].PartyFlg != true) stage.masu[i, j - 1].LightFlg = true;
                 }
-                break;
+            }
         }
+    // Use this for initialization
+    void Start () {
+	
     }
-
-	// Use this for initialization
-	void Start () {
 	
-	}
+    // Update is called once per frame
+    void Update () {
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    }
 }
+
