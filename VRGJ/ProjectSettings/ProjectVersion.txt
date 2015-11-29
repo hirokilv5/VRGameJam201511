@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+m_EditorVersion: 5.2.3f1
+=======
+<<<<<<< HEAD
 m_EditorVersion: 5.2.2f1
 =======
 m_EditorVersion: 5.1.0f3
 >>>>>>> hirokisub
+>>>>>>> 7a77ad67a52bf8c6eb7bfff51db615857e92e09d
 m_StandardAssetsVersion: 0
