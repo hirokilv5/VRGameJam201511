@@ -194,7 +194,7 @@ Camera:
     height: 1
   near clip plane: .300000012
   far clip plane: 1000
-  field of view: 60
+  field of view: 38.1599007
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -216,8 +216,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 242456888}
-  m_LocalRotation: {x: .258819073, y: 0, z: 0, w: .965925813}
-  m_LocalPosition: {x: 4, y: 2.5, z: -1}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: 4, y: 2.5, z: 9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -289,9 +289,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Text
-
-'
+  m_Text: board
 --- !u!222 &644934631
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -388,7 +386,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1001 &1050749185
 Prefab:
   m_ObjectHideFlags: 0
@@ -546,7 +544,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &1650777919
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +633,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a9e2f9696b9f45dc99b564ffb4a6218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textr: {fileID: 0}
 --- !u!114 &1688487921
 MonoBehaviour:
   m_ObjectHideFlags: 0
