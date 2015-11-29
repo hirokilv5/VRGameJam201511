@@ -49,7 +49,7 @@ public class Player : MonoBehaviour {
             HU_Coma[i].prehab_coma = (GameObject)Instantiate(
                     Coma_Prehab[HU_Coma[i].Now_Job],
                     new Vector3(i * 1, 0, 6),
-                    Quaternion.identity
+                    Quaternion.Euler(new Vector3(0, 180, 0))
                 );
             //敵歩
             EN_HU_Coma[i].EnemyFlg = true;
@@ -118,10 +118,10 @@ public class Player : MonoBehaviour {
 
             if (i == 0)
             {
-                KINN_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[KINN_Coma[i].Now_Job], new Vector3(3, 0, 8), Quaternion.identity);
-                GINN_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[GINN_Coma[i].Now_Job], new Vector3(2, 0, 8), Quaternion.identity);
-                KEIMA_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[KEIMA_Coma[i].Now_Job], new Vector3(1, 0, 8), Quaternion.identity);
-                KOUSYA_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[KOUSYA_Coma[i].Now_Job], new Vector3(0, 0, 8), Quaternion.identity);
+                KINN_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[KINN_Coma[i].Now_Job]/*プレハブ*/, new Vector3(3, 0, 8)/*座標*/, Quaternion.Euler(new Vector3(0, 180, 0))/*rotation*/);
+                GINN_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[GINN_Coma[i].Now_Job], new Vector3(2, 0, 8), Quaternion.Euler(new Vector3(0, 180, 0)));
+                KEIMA_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[KEIMA_Coma[i].Now_Job], new Vector3(1, 0, 8), Quaternion.Euler(new Vector3(0, 180, 0)));
+                KOUSYA_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[KOUSYA_Coma[i].Now_Job], new Vector3(0, 0, 8), Quaternion.Euler(new Vector3(0,180,0)));
 
                 EN_KINN_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[KINN_Coma[i].Now_Job], new Vector3(5, 0, 0), Quaternion.identity);
                 EN_GINN_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[GINN_Coma[i].Now_Job], new Vector3(6, 0, 0), Quaternion.identity);
@@ -131,10 +131,10 @@ public class Player : MonoBehaviour {
             }
             else if (i == 1)
             {
-                KINN_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[KINN_Coma[i].Now_Job], new Vector3(5, 0, 8), Quaternion.identity);
-                GINN_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[GINN_Coma[i].Now_Job], new Vector3(6, 0, 8), Quaternion.identity);
-                KEIMA_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[KEIMA_Coma[i].Now_Job], new Vector3(7, 0, 8), Quaternion.identity);
-                KOUSYA_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[KOUSYA_Coma[i].Now_Job], new Vector3(8, 0, 8), Quaternion.identity);
+                KINN_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[KINN_Coma[i].Now_Job], new Vector3(5, 0, 8), Quaternion.Euler(new Vector3(0, 180, 0)));
+                GINN_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[GINN_Coma[i].Now_Job], new Vector3(6, 0, 8), Quaternion.Euler(new Vector3(0, 180, 0)));
+                KEIMA_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[KEIMA_Coma[i].Now_Job], new Vector3(7, 0, 8), Quaternion.Euler(new Vector3(0, 180, 0)));
+                KOUSYA_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[KOUSYA_Coma[i].Now_Job], new Vector3(8, 0, 8), Quaternion.Euler(new Vector3(0, 180, 0)));
 
                 EN_KINN_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[KINN_Coma[i].Now_Job], new Vector3(3, 0, 0), Quaternion.identity);
                 EN_GINN_Coma[i].prehab_coma = (GameObject)Instantiate(Coma_Prehab[GINN_Coma[i].Now_Job], new Vector3(2, 0, 0), Quaternion.identity);
@@ -151,7 +151,7 @@ public class Player : MonoBehaviour {
             HISYA_Coma.prehab_coma = (GameObject)Instantiate(
                     Coma_Prehab[HISYA_Coma.Now_Job],
                     new Vector3(7, 0, 7),
-                    Quaternion.identity
+                    Quaternion.Euler(new Vector3(0, 180, 0))
                 );
             //敵飛車
             EN_HISYA_Coma.EnemyFlg = true;
@@ -173,7 +173,7 @@ public class Player : MonoBehaviour {
             KAKU_Coma.prehab_coma = (GameObject)Instantiate(
                     Coma_Prehab[KAKU_Coma.Now_Job],
                     new Vector3(1, 0, 7),
-                    Quaternion.identity
+                    Quaternion.Euler(new Vector3(0, 180, 0))
                 );
             //敵角
             EN_KAKU_Coma.EnemyFlg = true;
@@ -195,7 +195,7 @@ public class Player : MonoBehaviour {
             OU_Coma.prehab_coma = (GameObject)Instantiate(
                     Coma_Prehab[OU_Coma.Now_Job],
                     new Vector3(4, 0, 8),
-                    Quaternion.identity
+                    Quaternion.Euler(new Vector3(0, 180, 0))
                 );
             //敵王
             EN_OU_Coma.EnemyFlg = true;
