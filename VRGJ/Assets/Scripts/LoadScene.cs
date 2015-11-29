@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SceneLoadScript : MonoBehaviour {
+public class LoadScene : MonoBehaviour {
 	
 	public void SceneLoad (){
-		Application.LoadLevel ("aa  ");
+		Application.LoadLevel ("Game");
 	}
 }
